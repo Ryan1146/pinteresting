@@ -8,7 +8,7 @@ class PinsController < ApplicationController
   # GET /pins
   # GET /pins.json
   def index
-    @pins = Pin.all.order("created_at DESC").limit(2)
+    @pins = Pin.all.order("created_at DESC")
   end
 
   # GET /pins/1
