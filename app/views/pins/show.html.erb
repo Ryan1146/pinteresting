@@ -12,7 +12,7 @@
 				<p>
 				  <!--<strong>Description:</strong>-->
 				  <p><%= @pin.description %></p>
-				   <p><strong><%= @pin.user.email if(@pin.user) %></strong></p>
+				   <p><strong><%= @pin.user.name if(@pin.user) %></strong></p>
 				</p>
 
 				<%if @pin.user == current_user %>
