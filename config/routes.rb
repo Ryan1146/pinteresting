@@ -1,6 +1,7 @@
 Pinteresting::Application.routes.draw do
   resources :pins
 
+  #devise_for :users, :controllers => {:registrations => "registrations"}
   devise_for :users
   #route:resurce
   #root "pages#home"

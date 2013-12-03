@@ -1,6 +1,9 @@
 <%= render 'pages/home'  unless user_signed_in?%>
 
 <div id="pins" class="transitions-enabled">
+
+
+
   <% @pins.each do |pin| %>
     <div class="box panel panel-default">
       
@@ -10,7 +13,13 @@
       -->
       <div class="panel-body">
         <p><%= pin.description %></p>
+
+       <div class="well">
+       <img src= <%=pin.user.image.url(:thumb)%> class="img-avatar"></img>
+       <%#image_tag(pin.user.image.url(:thumb))%>
+
         <strong><%= pin.user.name if(pin.user) %></strong>
+       </div>
 
         <% if pin.user == current_user %>
           <div class="action">
@@ -27,6 +36,14 @@
   <% end %>
 </div>
 
+<!--
 <div class="center">
+  <% @users.each do |user| %>
+
+      <p><%= user.email %></p>
+      <%= image_tag(user.image.url(:thumb)) %>
+      <p><%= user.encrypted_password %></p>
+  <% end %>
   <%= will_paginate @posts, renderer: BootstrapPagination::Rails%>
 </div>
+-->
