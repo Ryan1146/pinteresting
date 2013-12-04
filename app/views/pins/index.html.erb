@@ -15,7 +15,7 @@
         <p><%= pin.description %></p>
 
        <div class="well">
-       <img src= <%=pin.user.image.url(:thumb)%> class="img-avatar"></img>
+       <img src= <%=pin.user.image.url(:thumb) if(pin.user)%> class="img-avatar"></img>
        <%#image_tag(pin.user.image.url(:thumb))%>
 
         <strong><%= pin.user.name if(pin.user) %></strong>
@@ -36,7 +36,7 @@
   <% end %>
 </div>
 
-<!--
+
 <div class="center">
   <% @users.each do |user| %>
 
@@ -46,4 +46,3 @@
   <% end %>
   <%= will_paginate @posts, renderer: BootstrapPagination::Rails%>
 </div>
--->

@@ -1,4 +1,5 @@
 Pinteresting::Application.routes.draw do
+  ActiveAdmin.routes(self)
   resources :pins
 
   #devise_for :users, :controllers => {:registrations => "registrations"}
