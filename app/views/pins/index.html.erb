@@ -38,11 +38,13 @@
 
 
 <div class="center">
+  <!--
   <% @users.each do |user| %>
 
       <p><%= user.email %></p>
       <%= image_tag(user.image.url(:thumb)) %>
       <p><%= user.encrypted_password %></p>
   <% end %>
+  -->
   <%= will_paginate @posts, renderer: BootstrapPagination::Rails%>
 </div>
