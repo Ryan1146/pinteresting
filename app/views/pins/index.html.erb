@@ -24,9 +24,11 @@
        <!-- <p><%= pin.description %></p>-->
 
        <div class="row">
-       
-       <img src= <%=pin.user.image.url(:thumb) if(pin.user)%> class="img-avatar"></img>
         
+       <!--
+       <img src= <%=pin.user.image.url(:thumb) if(pin.user)%> class="img-avatar"></img>
+       -->
+
        <%#image_tag(pin.user.image.url(:thumb))%>
 
         <strong><%= pin.user.name if(pin.user) %></strong>
