@@ -1,12 +1,55 @@
 <%= render 'pages/home'  unless user_signed_in?%>
 
+<script>
+$(".flip").click(function(){
+  $("#panel").slideToggle();
+});
+</script>
+
     <!--hairdo-->
+    <!--
     <ul class="nav nav-tabs">
-      <li class="active"><a href="#">全部</a></li>
-       <li><a href="#">公館</a></li>
-      <li><a href="#">景美</a></li>
-      <li><a href="#">內湖</a></li>
+      <li class=""><a class="flip">設計師</a></li>
+      <li><a href="" class="flip">評價</a></li>
+      <li><a href="" class="flip">價格</a></li>
     </ul>
+      -->
+
+    
+    <div id="panel" class="alert alert-info">
+      <ul class="nav nav-pills">
+    
+        <li class="dropdown">
+        <a href="#" class="dropdown-toggle" data-toggle="dropdown">設計師 <b class="caret"></b></a>
+        <ul class="dropdown-menu">
+          <li><a href="#">Hsien-Han Liu</a></li>
+          <li><a href="#">Hsien-Han Liu</a></li>
+          <li><a href="#">Hsien-Han Liue</a></li>
+          <li class="divider"></li>
+          <li><a href="#">Hsien-Han Liu</a></li>
+        </ul>
+        </li>
+
+        <li class="dropdown">
+        <a href="#" class="dropdown-toggle" data-toggle="dropdown">地區 <b class="caret"></b></a>
+        <ul class="dropdown-menu">
+          <li><a href="#">公館</a></li>
+          <li><a href="#">景美</a></li>
+          <li><a href="#">內湖</a></li>
+        </ul>
+        </li>
+        <li class="dropdown">
+        <a href="#" class="dropdown-toggle" data-toggle="dropdown">評價 <b class="caret"></b></a>
+        <ul class="dropdown-menu">
+          <li><a href="#">80up</a></li>
+          <li><a href="#">50up</a></li>
+          <li><a href="#">30up</a></li>
+        </ul>
+        </li>
+        
+      </ul>
+    </div>
+
     <!--hairdo-->
 
 <div id="pins" class="transitions-enabled">
